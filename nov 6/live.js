@@ -179,4 +179,16 @@ for(k = 0 ;k < 10 ;k++){
     document.writeln("<br>");
 }
 
+function myfunctio(p1,p2){
+    return p1*p2;
+}
+document.writeln(myfunctio(3,4));
 
+
+///////////////////////////function expression 
+const container =function(c1,c2){
+
+   return c1+c2; 
+}
+
+document.writeln(container(5,10)); 
