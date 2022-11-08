@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+</head>
+<body>
+    <label for="country"></label>
+
+<select name="country" id="country" onchange="myFunction()">
+  <option value="Norway">Norway</option>
+  <option value="Jordan">Jordan</option>
+  <option value="china">china</option>
+  <option value="Syria">Syria</option>
+  <option value="Italy">Italy</option>
+</select><br><br>
+<img id="img" src="n.png" width="25%" height="25%">
+    <script>
+
+function myFunction() {
+     var x = document.getElementById("country").value;
+    // document.getElementById("img").src;
+  
+    // for(let x=0; x<arr.length; x++){
+        if(x=="Norway"){
+            document.getElementById("img").src="n.png";
+        }
+      else if(x=="Jordan"){
+
+            document.getElementById("img").src="j.jpg";
+        }
+        else if(x=="china"){
+
+            document.getElementById("img").src="1-1.jpg";
+        }
+
+        else if(x=="Syria"){
+
+document.getElementById("img").src="s.png";
+}
+else if(x=="Italy"){
+
+document.getElementById("img").src="i.jpg";
+}
+    }
+
+
+    </script>
+</body>
+</html>

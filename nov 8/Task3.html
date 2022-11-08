@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+    <style>
+        #id{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div style="display:inline-block ;">
+        <select name="font" id="font" onchange="myFunction()">
+            <option value=" Arial"> Arial</option>
+            <option value="Cambria">Cambria</option>
+            <option value="Impact">Impact</option>
+          
+          </select>
+          <select name="size" id="size" onchange="myFunction1()" >
+            <option value="10px">10px</option>
+            <option value="30px">30px</option>
+            <option value="50px">50px</option>
+          
+          </select>
+
+          <label for="vehicle1" > Italic</label>
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Italic" onchange="fun1()" >
+          <label for="vehicle2">Bold</label>
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="Bold" onchange="fun2()">
+          <label for="vehicle3">Underline</label>
+          <input type="checkbox" id="vehicle3" name="vehicle3" value="Underline" onchange="fun3()">
+        
+ <p style="border:2px solid black  ; width:500px; height:150px; " id="p1"> 
+Rahma aktam obeidat ,software engineer
+
+ </p>
+  
+    </div>
+
+
+    <script> 
+    function myFunction(){
+        var x = document.getElementById("font").value;
+        if(x=="Arial"){
+            document.getElementById("p1").style.fontFamily="Arial";
+        }
+        else if(x=="Cambria"){
+            document.getElementById("p1").style.fontFamily="Cambria";
+
+        
+
+        }
+        else if(x=="Impact"){
+            document.getElementById("p1").style.fontFamily="Impact";
+
+        }
+    }
+    function myFunction1(){
+        var y = document.getElementById("size").value;
+        if(y=="10px"){
+            document.getElementById("p1").style.fontSize="10px";
+        }
+        else if(y=="30px"){
+            document.getElementById("p1").style.fontSize="30px";
+
+        
+
+        }
+        else if(y=="50px"){
+            document.getElementById("p1").style.fontSize="50px";
+
+        }
+
+    }
+    function fun1(){
+
+        var z= document.getElementById("vehicle1").value;
+        if(z=="Italic")
+        document.getElementById("p1").style.fontStyle="italic";
+    }
+
+    function fun2(){
+
+var a= document.getElementById("vehicle2").value;
+if(a=="Bold")
+document.getElementById("p1").style.fontWeight="bold";
+}
+function fun3(){
+
+var b= document.getElementById("vehicle3").value;
+if(b=="Underline")
+document.getElementById("p1").style.textDecoration="underline";
+}
+
+    </script>
+</body>
+</html>
