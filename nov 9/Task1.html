@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+
+
+<form>
+    <label for="fname">Your Name:</label><br>
+    <input type="text" id="na" name="name" value="" placeholder="name"><br>
+    <label for="age">Your Age</label><br>
+    <input type="number" id="age" name="age" value="age"><br><br>
+
+<label > Your Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label>
+
+<input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br><br>
+
+
+<label for="w3review">Brief Description:</label>
+<br>
+<textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="write here.....">
+
+</textarea><br><br>
+<label for="major ">Your major :</label><br>
+<input type="text" id="m" name="major " value="major"><br><br>
+
+<label>fav_language:</label><br>
+<input type="checkbox" id="vehicle1" name="vehicle1" value="HTML">
+<label for="vehicle1">HTML</label><br>
+<input type="checkbox" id="vehicle2" name="vehicle2" value="C++">
+<label for="vehicle2"> C++</label><br>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Java">
+<label for="vehicle3">Java</label><br><br>
+
+
+  </form>
+
+  <button type="submit" value="submit" onclick="fun1()">submit</button>
+  <br><br>
+  <div style=" background-color:rgb(161, 220, 220) ; width:400px ; height:300px ; border:2px solid black; display:none;" id="DD">
+    <p id="p1">your name: </p>
+    <p id="p2">your age: </p>
+    <p id="p3">your gender: </p>
+    <p id="p4">brief Description: </p>
+    <p id="p5">Your major: </p>
+    <p>fav_language:
+        <ul style="list-style:none ;">
+            <li id="l1"></li>
+            <li id="l2"></li>
+            <li id="l3"></li>
+        </ul>
+    </p>
+  </div>
+<body>
+    <script>
+
+
+function fun1(){
+
+localStorage.setItem("name", document.getElementById('na').value);
+let Name = localStorage.getItem("name");
+//document.write(Name);
+
+localStorage.setItem("age", document.getElementById('age').value);
+let Age = localStorage.getItem("age");
+
+localStorage.setItem("male" ,document.getElementById("male").checked);
+let male=document.getElementById("male").checked;
+
+localStorage.setItem("female" ,document.getElementById("female").checked);
+let female=document.getElementById("female").checked;
+
+
+localStorage.setItem("Description", document.getElementById('w3review').value);
+let Description = localStorage.getItem("Description");
+
+localStorage.setItem("Major", document.getElementById("m").value);
+let major = localStorage.getItem("Major");
+
+
+localStorage.setItem("html" , document.getElementById("vehicle1").checked);
+let html=localStorage.getItem("html").checked;
+
+
+localStorage.setItem("c++" , document.getElementById("vehicle2").checked);
+let c=localStorage.getItem("c++").checked;
+
+
+
+localStorage.setItem("java" , document.getElementById("vehicle3").checked);
+let java=localStorage.getItem("java").checked;
+
+
+document.getElementById("DD").style.display="block";
+document.getElementById("p1").innerHTML+= Name;
+
+document.getElementById("p2").innerHTML+= Age;
+var x=document.getElementById("male").value;
+var y=document.getElementById("female").value;
+
+if(x=="male")
+document.getElementById("p3").innerHTML+= x;
+else
+document.getElementById("p3").innerHTML+= y;
+
+document.getElementById("p4").innerHTML+= Description;
+
+document.getElementById("p5").innerHTML+= major;
+
+
+var a= document.getElementById("vehicle1");
+
+if(a.checked){
+    document.getElementById("l1").innerHTML+= html;
+
+}
+    else {
+        document.getElementById("vehicle1").style.display="none"; 
+    }
+
+    var b= document.getElementById("vehicle2");
+
+if(b.checked){
+    document.getElementById("l2").innerHTML+=c;
+
+}
+    else {
+        document.getElementById("vehicle2").style.display="none"; 
+    }
+
+    var z= document.getElementById("vehicle3");
+
+if(z.checked){
+    document.getElementById("l3").innerHTML+=z.id;
+
+}
+    else {
+        document.getElementById("vehicle3").style.display="none"; 
+    }
+}
+
+
+
+
+
+
+
+// let personName = sessionStorage.getItem("lastname");
+// document.getElementById("demo").innerHTML = personName;
+// function GENDER(b){
+//     var y1=document.getElementById("female");
+//     var y2=document.getElementById("male");
+
+//     if(b.id == "female" && y1.checked){
+//         localStorage.setItem(b.id,b.value);
+//         localStorage["male"]="off";
+//     }
+//     else if(b.id == "male" && y2.checked){
+//         localStorage.setItem(b.id,b.value);
+//         localStorage["female"]="off";
+//     }
+//}
+
+    </script>
+</body>
+</html>

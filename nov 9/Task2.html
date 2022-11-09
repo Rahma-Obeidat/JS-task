@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+</head>
+<body>
+
+    <label for="sub">Subject:</label><br>
+    <input type="text" id="subject" name="Subject" value="" placeholder="Subject"><br><br>
+
+    <label for="w3review"> Description:</label>
+    <br>
+    <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="write here....." >
+    </textarea><br><br>
+     
+<label for="w3">User Types:</label>
+<br>
+<textarea id="w3" name="w3" rows="5" cols="50" placeholder="write here.....">
+</textarea><br><br>
+
+   
+    
+<label for="w">Technology used:</label>
+<br>
+<textarea id="w" name="w" rows="4" cols="50" placeholder="write here....."></textarea><br><br>
+<button type="submit" value="submit" onclick="fun1()">submit</button><br><br>
+
+<div style=" background-color:rgb(161, 220, 220) ; width:400px ; height:300px ; border:2px solid black; display:none;" id="DD">
+    <p id="p1">Subject: </p>
+    <p id="p2">Description: </p>
+    <p id="p3">User Types: </p>
+    <p id="p4">Technology used: </p>
+ 
+  </div>
+    <script>
+function fun1()
+{
+
+    sessionStorage.setItem("subject" ,document.getElementById("subject").value);
+    let subject=sessionStorage.getItem("subject");
+
+    sessionStorage.setItem("Description",document.getElementById("w3review").value);
+    let dascription=sessionStorage.getItem("Description");
+
+    sessionStorage.setItem("userTypes",document.getElementById("w3").value);
+    let userTypes=sessionStorage.getItem("userTypes");
+
+
+    sessionStorage.setItem("Technology" ,document.getElementById("w").value);
+    let Technology=sessionStorage.getItem("Technology");
+
+document.getElementById("DD").style.display="block";
+
+document.getElementById("p1").innerHTML+= subject;
+document.getElementById("p2").innerHTML+= dascription;
+document.getElementById("p3").innerHTML+= userTypes;
+document.getElementById("p4").innerHTML+= Technology;
+
+}
+    </script>
+</body>
+</html>

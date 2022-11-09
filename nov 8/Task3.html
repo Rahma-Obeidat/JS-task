@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task3</title>
     <style>
-        #id{
+    
+         #id{
             text-decoration: underline;
-        }
+            font-weight:normal;
+        } 
+
+
+        
     </style>
 </head>
 <body>
@@ -84,9 +89,17 @@ Rahma aktam obeidat ,software engineer
 
     function fun2(){
 
-var a= document.getElementById("vehicle2").value;
-if(a=="Bold")
+ var a= document.getElementById("vehicle2");
+// if(a=="Bold")
+// document.getElementById("p1").style.fontWeight="bold";
+// else {
+//     document.getElementById("p1").style.fontWeight="normal";
+// }
+if(a.checked)
 document.getElementById("p1").style.fontWeight="bold";
+else
+
+document.getElementById("p1").style.fontWeight="normal";
 }
 function fun3(){
 

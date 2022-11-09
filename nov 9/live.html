@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Window Object</h1>
+<h2>The sessionStorage Object</h2>
+
+<p>Person Name is:</p>
+<p id="demo"></p>
+<p id="D"></p>
+
+<script>
+
+//Save Data to Session Storage
+//sessionStorage.setItem("key", "value");
+sessionStorage.setItem("lastname", "Rahma");
+let personName = sessionStorage.getItem("lastname");
+document.getElementById("demo").innerHTML = personName;
+
+// localStorage.setItem("lastname", "Rahma");
+// let personName2 = sessionStorage.getItem("lastname");
+// document.getElementById("D").innerHTML = personName;
+
+localStorage.setItem("lastname", "Rahma111");
+let personName3 = sessionStorage.getItem("lastname");
+document.getElementById("D").innerHTML = personName3;
+//Read Data from Session Storage
+//let lastname = sessionStorage.getItem("key");
+
+
+//Remove Data from Session Storage  
+//sessionStorage.removeItem("key");
+
+ sessionStorage.removeItem("lastname");
+
+
+
+
+//Remove All (Clear session Storage)
+//sessionStorage.clear();
+
+ sessionStorage.clear();
+
+
+localStorage.clear();
+localStorage.removeItem("lastname");
+</script>
+
+</body>
+</html>
