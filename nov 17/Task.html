@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+<body>
+
+    <form action="/action_page.php">
+        <label for="name">Choose a name:</label>
+        <select name="name" id="name" onchange="neww()">
+      
+        </select>
+        <br><br>
+        <img src="" id="image">
+      </form>
+    <script>
+async function InfoOfUsers() {
+
+    const rahma= await fetch("https://www.breakingbadapi.com/api/characters");
+    console.log(rahma);
+
+    const data= await rahma.json();
+    console.log(data);
+
+  let x=  document.getElementById("name");
+  for(let i=0 ; i<data.length ;i++){
+  
+         x.innerHTML += `<option value="${data[i].img}">${data[i].name}</option>`;
+        }
+
+
+}
+InfoOfUsers();
+
+
+
+async function neww(){
+    let selected = document.getElementById('name').value;
+    document.getElementById('image').src = selected;
+}
+    </script>
+</body>
+</html>

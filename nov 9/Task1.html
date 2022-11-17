@@ -101,43 +101,43 @@ document.getElementById("DD").style.display="block";
 document.getElementById("p1").innerHTML+= Name;
 
 document.getElementById("p2").innerHTML+= Age;
-var x=document.getElementById("male").value;
-var y=document.getElementById("female").value;
+var x=document.getElementById("male").checked;
+var y=document.getElementById("female").checked;
 
-if(x=="male")
-document.getElementById("p3").innerHTML+= x;
-else
-document.getElementById("p3").innerHTML+= y;
+if(x)
+document.getElementById("p3").innerHTML += document.getElementById("male").value;
+else if(y)
+document.getElementById("p3").innerHTML += document.getElementById("female").value;
 
 document.getElementById("p4").innerHTML+= Description;
 
 document.getElementById("p5").innerHTML+= major;
 
 
-var a= document.getElementById("vehicle1");
+var a= document.getElementById("vehicle1").checked;
 
-if(a.checked){
-    document.getElementById("l1").innerHTML+= html;
+if(a){
+    document.getElementById("l1").innerHTML+=document.getElementById("vehicle1").value;
 
 }
     else {
         document.getElementById("vehicle1").style.display="none"; 
     }
 
-    var b= document.getElementById("vehicle2");
+    var b= document.getElementById("vehicle2").checked;
 
-if(b.checked){
-    document.getElementById("l2").innerHTML+=c;
+if(b){
+    document.getElementById("l2").innerHTML+=document.getElementById("vehicle2").value;
 
 }
     else {
         document.getElementById("vehicle2").style.display="none"; 
     }
 
-    var z= document.getElementById("vehicle3");
+    var z= document.getElementById("vehicle3").checked;
 
-if(z.checked){
-    document.getElementById("l3").innerHTML+=z.id;
+if(z){
+    document.getElementById("l3").innerHTML+=document.getElementById("vehicle3").value;
 
 }
     else {
@@ -169,4 +169,4 @@ if(z.checked){
 
     </script>
 </body>
-</html>
+</html> 

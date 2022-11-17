@@ -10,6 +10,7 @@
          #id{
             text-decoration: underline;
             font-weight:normal;
+            
         } 
 
 
@@ -82,19 +83,16 @@ Rahma aktam obeidat ,software engineer
     }
     function fun1(){
 
-        var z= document.getElementById("vehicle1").value;
-        if(z=="Italic")
+        var z= document.getElementById("vehicle1");
+        if(z.checked)
         document.getElementById("p1").style.fontStyle="italic";
+        else
+        document.getElementById("p1").style.fontStyle="normal";
     }
 
     function fun2(){
 
  var a= document.getElementById("vehicle2");
-// if(a=="Bold")
-// document.getElementById("p1").style.fontWeight="bold";
-// else {
-//     document.getElementById("p1").style.fontWeight="normal";
-// }
 if(a.checked)
 document.getElementById("p1").style.fontWeight="bold";
 else
@@ -103,9 +101,12 @@ document.getElementById("p1").style.fontWeight="normal";
 }
 function fun3(){
 
-var b= document.getElementById("vehicle3").value;
-if(b=="Underline")
+var b= document.getElementById("vehicle3");
+if(b.checked)
 document.getElementById("p1").style.textDecoration="underline";
+
+else 
+document.getElementById("p1").style.textDecoration="none";
 }
 
     </script>

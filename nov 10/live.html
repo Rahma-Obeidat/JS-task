@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <script>
+        var email="rahmaobeidat55@gmail.com";
+        var pass="Rahmaa1@"; 
+        var regex_email=/[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$/;
+        var regex_pass=/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+
+        var resulte=email.match(regex_email);
+        console.log(resulte);
+
+        var resulte2=pass.match(regex_pass);
+        console.log(resulte2);
+
+        function sum1(a,b){
+return a+b;
+        }
+
+        document.write(sum1(2,5));
+
+        document.write("<br>");
+
+
+        var arr=[5,2,2,1,8,66,55,77,34,9,55,1];
+
+        function even(b){
+            for(let x=0 ;x<b.length; x++){
+                if(b[x]%2==0)
+                document.writeln(b[x]);
+            }
+        }
+        even(arr);
+
+
+//         function numberBetweenUs(c,d){
+// i
+
+//         }
+
+document.writeln("<br>");
+var s;
+
+var arr2=[2,10,4,8,6];
+function index(x,y){
+for(let d=0;d<x.length ;d++){
+if(y==1)
+return arr2[y];
+
+}
+
+}
+document.writeln(index(arr2,1));
+
+
+
+    </script>
+</body>
+</html>
